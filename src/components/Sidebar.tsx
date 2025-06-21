@@ -1,13 +1,13 @@
 const Sidebar = () => (
   <div >
-    <div className="w-64 h-auto overflow-hidden bg-[#0f1624] text-white p-6 m-3 flex flex-col items-center rounded-3xl h-[70vh] border border-[#2a3249] shadow-lg">
-      <img src="/src/assets/profileImage.jpeg" alt="Profile" className="w-32 h-32 rounded-full mb-3 border-2 border-gray-600 object-cover" />
-      <h2 className="text-2xl font-bold text-center">Shashi Madushan</h2>
-      
-      <div className="bg-transparent text-center my-3">
-        <span className="px-6 py-1 rounded-full border border-gray-500 text-sm">Full-stack Developer</span>
+    <div className="w-64 h-auto overflow-hidden bg-[#0f1624] text-white p-6 m-3 flex flex-col items-center rounded-3xl  border border-[#2a3249] shadow-lg">
+      <img src="/src/assets/profileImage.jpeg" alt="Profile" className="w-32 h-32 rounded-full mb-4 border-4 border-blue-700 object-cover" />
+      <h2 className="text-2xl font-bold text-blue-200 text-center mb-1">Shashi Madushan</h2>
+      <div className="bg-transparent text-center my-2">
+        <span className="px-6 py-1 rounded-full border border-blue-700 text-sm font-semibold text-blue-200 bg-[#18213a]">
+          Full-stack Developer
+        </span>
       </div>
-      
       <div className="border-t border-[#2a3249] w-full my-4"></div>
       
       <div className="text-left w-full text-sm space-y-6">

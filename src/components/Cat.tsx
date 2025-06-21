@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Cat = () => {
   return (
     <div className="w-fit h-fit flex items-center justify-center">
@@ -20,7 +18,7 @@ const Cat = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 158 564"
-            className="w-[17px] absolute top-1/2 animate-tail origin-top"
+            className="w-[17px] absolute -right-4 top-1/2 animate-tail origin-top"
           >
             <path
               fill="#191919"
@@ -31,7 +29,7 @@ const Cat = () => {
           {/* ZZZ Text */}
           <div className="flex flex-col w-[50px] absolute -top-24 left-28">
             <span className="text-black font-bold text-[25px] ml-[10px] animate-zzz">Z</span>
-            <span className="text-black font-bold text-[15px] animate-zzz delay-200">Z</span>
+            <span className="text-black font-bold text-[15px] animate-zzz-delay">Z</span>
           </div>
         </div>
 
@@ -58,4 +56,4 @@ const Cat = () => {
   )
 }
 
-export default Cat  
+export default Cat
