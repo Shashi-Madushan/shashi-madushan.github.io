@@ -14,8 +14,10 @@ const ProjectsSection = () => {
         });
     }, []);
     return (
-        <div className="bg-[#0f1624] min-h-fit p-5 md:p-8">
-           <h4 className="text-xl font-semibold mb-6 md:mb-8 ml-2 md:ml-4">Recent Projects .</h4>
+        <div className="bg-[#121b2c] min-h-fit p-5 md:p-8">
+           <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-8 text-center flex items-center justify-center gap-3">
+             Recent Projects
+           </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-3">
                 {loading
                   ? Array.from({ length: 4 }).map((_, idx) => <ProjectCardSkeleton key={idx} />)
