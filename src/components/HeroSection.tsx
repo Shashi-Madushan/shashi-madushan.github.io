@@ -1,7 +1,10 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
 
+
+
 const HeroSection: React.FC = () => {
+
   return (
     <div className="hero-section bg-[#0f1624] text-white min-h-[80vh] flex flex-col justify-center items-center p-4 relative overflow-hidden">
       {/* Animated Background Blobs */}
@@ -10,7 +13,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute top-[40%] left-[-80px] w-[200px] h-[200px] bg-pink-500 opacity-20 rounded-full filter blur-2xl animate-blob3 z-0"></div>
       {/* End Animated Background */}
 
-      <div className="text-center mb-8 z-10">
+      <div className="text-center mb-8 z-3">
         <h1 className="text-5xl md:text-6xl font-bold mb-4">
           Hello, I'm <span className="text-blue-400">Shashi</span>.
         </h1>
@@ -37,7 +40,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex space-x-4 mt-8 z-10">
+      <div className="flex space-x-4 mt-8 z-3">
         <Link 
           to="/projects" 
           className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full text-lg transition-all"
@@ -57,33 +60,10 @@ const HeroSection: React.FC = () => {
           About Me
         </Link>
       </div>
+      
     </div>
   );
 };
 
 export default HeroSection;
 
-/* Add the following Tailwind CSS keyframes to your global CSS (e.g., index.css or tailwind.css):
-
-@keyframes blob1 {
-  0%, 100% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -20px) scale(1.1);}
-  66% { transform: translate(-20px, 20px) scale(0.9);}
-}
-@keyframes blob2 {
-  0%, 100% { transform: translate(0px, 0px) scale(1);}
-  33% { transform: translate(-40px, 30px) scale(1.05);}
-  66% { transform: translate(20px, -30px) scale(0.95);}
-}
-@keyframes blob3 {
-  0%, 100% { transform: translate(0px, 0px) scale(1);}
-  33% { transform: translate(20px, 10px) scale(1.1);}
-  66% { transform: translate(-10px, -20px) scale(0.9);}
-}
-
-Then add these classes to your Tailwind config:
-    'blob1': 'blob1 12s infinite ease-in-out',
-    'blob2': 'blob2 14s infinite ease-in-out',
-    'blob3': 'blob3 16s infinite ease-in-out',
-and use as animate-blob1, animate-blob2, animate-blob3.
-*/

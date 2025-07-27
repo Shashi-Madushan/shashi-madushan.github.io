@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLatestProjects } from "../api/projects";
+import { getLatestProjects } from "../utils/projects";
 import ProjectCard from "../components/ProjectCard";
 import ProjectCardSkeleton from "../components/ProjectCardSkeleton";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllProjects } from "../api/projects";
+import { getAllProjects } from "../utils/projects";
 import ProjectCard from "../components/ProjectCard";
 import ProjectCardSkeleton from "../components/ProjectCardSkeleton";
 
