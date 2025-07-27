@@ -48,7 +48,7 @@ export function LanguageChart({ data }: Props) {
   // const total = items.reduce((sum, item) => sum + item.value, 0);
 
   return (
-    <div style={{ width: '100%', height: 300 }}>
+    <div style={{ width: '100%', height: 500 }}>
       <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-200 mb-4 text-center">
         Language Usage
       </h3>
@@ -68,8 +68,8 @@ export function LanguageChart({ data }: Props) {
             nameKey="name"
             cx="50%"
             cy="50%"
-            innerRadius={60}
-            outerRadius={90}
+            innerRadius={120}
+            outerRadius={170}
             paddingAngle={3}
             label={renderCustomizedLabel}
             labelLine={false}
