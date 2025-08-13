@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-
+import RepoList  from "./components/RepoList"
 const router = createBrowserRouter([
   {
     path: '/',
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: '/about', element: <About /> },
       { path: '/education', element: <Experience /> },
-      { path: '/projects', element: <Projects /> },
+      { path: '/projects', element: <RepoList /> },
     ]
   }
 ]);

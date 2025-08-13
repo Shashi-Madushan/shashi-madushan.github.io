@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      <GithubStatesSection/>
       <ServicesSection />
-      <ProjectsSection />
+      <GithubStatesSection/>
+      {/* <ProjectsSection /> */}
     </div>
   )
 }

@@ -20,6 +20,7 @@ export interface GitHubRepo {
   language: string | null;
   stargazers_count: number;
   forks_count: number;
+  created_at: string;
 }
 
 export interface GitHubUserData {
@@ -28,44 +29,43 @@ export interface GitHubUserData {
   languageStats: Record<string, number>;
 }
 
-export async function getGitHubProfile(username: string): Promise<GitHubProfile> {
-  const res = await fetch(`${BASE}/users/${username}`);
-  return res.json();
-}
-
-export async function getGitHubRepos(username: string): Promise<GitHubRepo[]> {
-  const res = await fetch(`${BASE}/users/${username}/repos?per_page=100`);
-  return res.json();
-}
-
-export async function getGitHubLanguageStats(username: string): Promise<Record<string, number>> {
-  const repos = await getGitHubRepos(username);
-  const count: Record<string, number> = {};
-  repos.forEach((r: GitHubRepo) => {
-    if (r.language) count[r.language] = (count[r.language] || 0) + 1;
-  });
-  const total = Object.values(count).reduce((a, b) => a + b, 0);
-  const languageStats: Record<string, number> = {};
-  Object.entries(count).forEach(([lang, c]) => {
-    languageStats[lang] = parseFloat(((c / total) * 100).toFixed(2));
-  });
-  return languageStats;
-}
-
 export async function getGitHubUserData(username: string): Promise<GitHubUserData> {
-  const [profile, repositories] = await Promise.all([
-    getGitHubProfile(username),
-    getGitHubRepos(username)
+  // Fetch profile and repositories in parallel
+  const [profileRes, reposRes] = await Promise.all([
+    fetch(`${BASE}/users/${username}`),
+    fetch(`${BASE}/users/${username}/repos?per_page=100`)
   ]);
-  const count: Record<string, number> = {};
-  repositories.forEach((r: GitHubRepo) => {
-    if (r.language) count[r.language] = (count[r.language] || 0) + 1;
-  });
-  const total = Object.values(count).reduce((a, b) => a + b, 0);
-  const languageStats: Record<string, number> = {};
-  Object.entries(count).forEach(([lang, c]) => {
-    languageStats[lang] = parseFloat(((c / total) * 100).toFixed(2));
+
+  const [profile, repositories] = await Promise.all([
+    profileRes.json(),
+    reposRes.json()
+  ]);
+
+  // Map repositories to include only required fields
+  const repoList: GitHubRepo[] = repositories.map((repo: any) => ({
+    name: repo.name,
+    html_url: repo.html_url,
+    description: repo.description,
+    language: repo.language,
+    stargazers_count: repo.stargazers_count,
+    forks_count: repo.forks_count,
+    created_at: repo.created_at,
+  }));
+
+  // Calculate language statistics
+  const languageCount: Record<string, number> = {};
+  repoList.forEach((repo: GitHubRepo) => {
+    if (repo.language) {
+      languageCount[repo.language] = (languageCount[repo.language] || 0) + 1;
+    }
   });
 
-  return { profile, repositories, languageStats };
+  const total = Object.values(languageCount).reduce((sum, count) => sum + count, 0);
+  const languageStats: Record<string, number> = {};
+  
+  Object.entries(languageCount).forEach(([language, count]) => {
+    languageStats[language] = parseFloat(((count / total) * 100).toFixed(2));
+  });
+
+  return { profile, repositories: repoList, languageStats };
 }
