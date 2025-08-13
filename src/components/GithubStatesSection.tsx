@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { getGitHubUserData, GitHubUserData } from '../utils/githubApi';
 import { ProfileCard } from './ProfileCard';
 import { LanguageChart } from './LanguageChart';
@@ -6,6 +6,19 @@ import { LanguageChart } from './LanguageChart';
 const GithubStatesSection = () => {
   const [githubData, setGithubData] = useState<GitHubUserData | null>(null);
   const [loading, setLoading] = useState(true);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,11 +44,11 @@ const GithubStatesSection = () => {
   }, []);
 
   return (
-  <section
+    <section
       className="py-10 px-2 md:py-16 md:px-8 bg-gradient-to-b from-[#0f1624] to-[#0f1a2d]"
       id="github-stats"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto" ref={sectionRef}>
         <h2 className="text-2xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4 text-center">
           GitHub Stats
         </h2>
@@ -60,7 +73,9 @@ const GithubStatesSection = () => {
             {/* Language Chart - Tall card spanning 2 rows */}
             <div className="md:col-span-2 md:row-span-2 min-h-[250px] md:min-h-[400px]">
               <div className="bg-[#162137]/80 backdrop-blur-sm rounded-2xl shadow-lg p-4 md:p-6 h-full flex flex-col border-t-4 border-blue-900 hover:border-blue-400 transition-all duration-300">
-                <LanguageChart data={githubData.languageStats} />
+                {isVisible && (
+                  <LanguageChart data={githubData.languageStats} />
+                )}
               </div>
             </div>
 

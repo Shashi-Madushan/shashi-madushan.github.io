@@ -29,6 +29,18 @@ const HeroSection: React.FC = () => {
               1000,
               'UI/UX Designer',
               1000,
+              'Embedded Systems Developer',
+              1000,
+              'IoT Enthusiast',
+              1000,
+              'AI Solutions Builder',
+              1000,
+              'Hardware Developer',
+              1000,
+              'Entrepreneur',
+              1000,
+              'Tech Explorer',
+              1000,
               'Introvert',
               1000
             ]}
