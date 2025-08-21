@@ -1,57 +1,64 @@
-# Portfolio React + Supabase
+# My Portfolio – React + Supabase
 
-<!-- Project Description -->
-This project is a personal developer portfolio web application designed to highlight your professional journey, technical skills, and open-source contributions. It provides an interactive platform to showcase your featured projects, display live GitHub statistics, and present your expertise in a visually appealing and organized manner. The portfolio is fully responsive, easily customizable, and integrates seamlessly with modern developer tools and APIs.
-
----
-
-## 🚀 Features
-
-- **Project Showcase**: Display your latest and featured projects with images, descriptions, and links.
-- **GitHub Integration**: Fetch and display your GitHub repositories and language stats.
-- **Skills & Technologies**: Highlight your tech stack and expertise.
-- **Services Section**: List the services you offer.
-- **Responsive Design**: Looks great on all devices.
-- **Easy Customization**: Update your data via JSON or API.
-- **Modern UI**: Built with Tailwind CSS and React Icons.
+Welcome to my personal developer portfolio!  
+This site is where I share my journey as a software engineer, showcase my favorite projects, and highlight the technologies and tools I use.  
+It’s built with modern web tech and designed to be fast, responsive, and easy to update.
 
 ---
 
-## 🖼️ Screenshots
+## 👋 About Me
 
-<!-- Add your screenshots below -->
+Hi, I’m Shashi Madushan.  
+I’m passionate about building scalable web apps, exploring IoT and automation, and contributing to open source.  
+This portfolio is a snapshot of my work, skills, and interests.
+
+---
+
+## 🚀 What’s Inside
+
+- **Projects**: My latest and featured work, with images, descriptions, and links.
+- **GitHub Stats**: Live stats and language breakdown from my GitHub profile.
+- **Skills & Technologies**: The stacks and tools I use most.
+- **Services**: What I can help you build or solve.
+- **Responsive Design**: Looks great on any device.
+- **Easy to Update**: All data is in JSON or fetched from APIs.
+
+---
+
+## 🖼️ Preview
+
+<!-- Replace with your own screenshots -->
 <p align="center">
   <img src="image.png" alt="Homepage" width="700"/>
 </p>
-
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [React Icons](https://react-icons.github.io/react-icons/)
-- **Charts**: [Recharts](https://recharts.org/)
-- **Routing**: [React Router](https://reactrouter.com/)
-- **API/Backend**: [Supabase](https://supabase.com/) (optional, for real data)
-- **Linting**: [ESLint](https://eslint.org/)
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS, React Icons
+- **Charts**: Recharts
+- **Routing**: React Router
+- **API/Backend**: Supabase (optional)
+- **Linting**: ESLint
 
 ---
 
-## 📁 Folder Structure
+## 📁 How It’s Organized
 
 ```
 portfolio-react-superbase/
 ├── public/
 ├── src/
-│   ├── assets/              # Images, icons, etc.
-│   ├── components/          # Reusable React components
-│   ├── data/                # Static JSON data (projects, skills, etc.)
-│   ├── pages/               # Page components (About, Home, etc.)
-│   ├── utils/               # Utility functions (API, helpers)
+│   ├── assets/         # Images, icons, etc.
+│   ├── components/     # UI components
+│   ├── data/           # JSON data (projects, skills, etc.)
+│   ├── pages/          # Page components (About, Home, etc.)
+│   ├── utils/          # API and helper functions
 │   ├── App.tsx
 │   ├── main.tsx
-│   └── ...other files
+│   └── ...
 ├── package.json
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -61,11 +68,22 @@ portfolio-react-superbase/
 
 ---
 
-## 🔧 Customization
+## ⚡ Customizing My Portfolio
 
-- **Projects**: Edit `src/data/projects.json` to add or update your projects.
-- **Skills/Technologies**: Update the relevant sections in `src/pages/About.tsx`.
-- **GitHub Stats**: Update your GitHub username in the API utility if needed.
-- **Images**: Place your screenshots in the `screenshots/` folder and reference them in the README.
+- **Projects**: Edit `src/data/projects.json` to add or update my projects.
+- **Skills/Technologies**: Change the relevant sections in `src/pages/About.tsx`.
+- **GitHub Stats**: My GitHub username is set in the API utility.
+- **Images**: Place screenshots in the `screenshots/` folder and reference them above.
+
+---
+
+## 🙏 Thanks
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Supabase](https://supabase.com/)
+- [Recharts](https://recharts.org/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
 ---
