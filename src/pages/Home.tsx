@@ -1,6 +1,6 @@
 import GithubStatesSection from '../components/GithubStatesSection';
 import HeroSection from '../components/HeroSection';
-import ProjectsSection from '../components/ProjectsSection';
+// import ProjectsSection from '../components/ProjectsSection';
 import ServicesSection from '../components/ServicesSection';
 
 const Home = () => {

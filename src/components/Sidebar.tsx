@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:block w-64 h-auto overflow-hidden bg-[#0f1624] text-white p-6 m-3 flex flex-col items-center rounded-3xl border border-[#2a3249] shadow-lg">
+      <div className=" lg:block w-64 h-auto overflow-hidden bg-[#0f1624] text-white p-6 m-3 flex flex-col items-center rounded-3xl border border-[#2a3249] shadow-lg">
         <div className="flex flex-col items-center w-full">
           <img src="/src/assets/profileImage.jpeg" alt="Profile" className="w-32 h-32 rounded-full mb-4 border-4 border-blue-700 object-cover" />
           <h2 className="text-2xl font-bold text-blue-200 text-center mb-1">Shashi Madushan</h2>
