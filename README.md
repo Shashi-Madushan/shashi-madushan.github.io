@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# Portfolio React + Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-featured developer portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
+Showcase your projects, GitHub stats, skills, and more with a beautiful, responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Project Showcase**: Display your latest and featured projects with images, descriptions, and links.
+- **GitHub Integration**: Fetch and display your GitHub repositories and language stats.
+- **Skills & Technologies**: Highlight your tech stack and expertise.
+- **Services Section**: List the services you offer.
+- **Responsive Design**: Looks great on all devices.
+- **Easy Customization**: Update your data via JSON or API.
+- **Modern UI**: Built with Tailwind CSS and React Icons.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🖼️ Screenshots
+
+<!-- Add your screenshots below -->
+<p align="center">
+  <img src="image.png" alt="Homepage" width="700"/>
+</p>
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [React Icons](https://react-icons.github.io/react-icons/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **API/Backend**: [Supabase](https://supabase.com/) (optional, for real data)
+- **Linting**: [ESLint](https://eslint.org/)
+
+---
+
+## 📁 Folder Structure
+
+```
+portfolio-react-superbase/
+├── public/
+├── src/
+│   ├── assets/              # Images, icons, etc.
+│   ├── components/          # Reusable React components
+│   ├── data/                # Static JSON data (projects, skills, etc.)
+│   ├── pages/               # Page components (About, Home, etc.)
+│   ├── utils/               # Utility functions (API, helpers)
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...other files
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── README.md
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔧 Customization
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Projects**: Edit `src/data/projects.json` to add or update your projects.
+- **Skills/Technologies**: Update the relevant sections in `src/pages/About.tsx`.
+- **GitHub Stats**: Update your GitHub username in the API utility if needed.
+- **Images**: Place your screenshots in the `screenshots/` folder and reference them in the README.
+
+---
