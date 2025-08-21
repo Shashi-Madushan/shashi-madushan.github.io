@@ -1,7 +1,7 @@
 # Portfolio React + Supabase
 
-A modern, full-featured developer portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
-Showcase your projects, GitHub stats, skills, and more with a beautiful, responsive UI.
+<!-- Project Description -->
+This project is a personal developer portfolio web application designed to highlight your professional journey, technical skills, and open-source contributions. It provides an interactive platform to showcase your featured projects, display live GitHub statistics, and present your expertise in a visually appealing and organized manner. The portfolio is fully responsive, easily customizable, and integrates seamlessly with modern developer tools and APIs.
 
 ---
 
