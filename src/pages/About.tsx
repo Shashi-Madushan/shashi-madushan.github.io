@@ -1,40 +1,36 @@
-import { FaUserAstronaut, FaCode, FaServer, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaJava, FaPython, FaHtml5, FaCss3Alt, FaJs, FaCogs } from "react-icons/fa";
+import { 
+   FaCode, FaServer, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaJava, FaPython, FaHtml5, FaCss3Alt, FaJs, FaCogs } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiPostgresql, SiExpress, SiSpring, SiHibernate, SiMysql, SiElectron, SiSpringboot, SiNextdotjs, SiArduino, SiEspressif, SiDigitalocean } from "react-icons/si";
 
 const About = () => {
   return (
     <div className="bg-gradient-to-b from-[#0f1624] to-[#0f1a2d] min-h-screen p-5 md:p-8">
       <h2 className="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-8 text-center flex items-center justify-center gap-3">
-        <FaUserAstronaut className="text-blue-300" /> About Me
+        {/* <FaUserAstronaut className="text-blue-300" /> About Me */}
+        About Me
       </h2>
       <div className="space-y-12 max-w-4xl mx-auto">
         {/* Who am I */}
         <section className="bg-[#162137]/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-blue-900/20 transition-all duration-300 flex flex-col md:flex-row items-center gap-8">
-          <div className="bg-gradient-to-br from-blue-900/50 to-blue-800/30 rounded-full p-6 flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
-            <FaUserAstronaut className="text-blue-400 text-5xl" />
-          </div>
+          {/* Removed robot icon */}
+          <div className="w-0 md:w-0" />
           <div>
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-200 flex items-center gap-2">
               Who am I?
             </h3>
             <div className="space-y-4 tracking-wide">
               <p className="text-gray-200 leading-relaxed text-lg">
-                I'm a passionate <span className="text-blue-400 font-semibold">Full-stack Developer</span> and 
-                <span className="text-cyan-400 font-semibold"> Tech Enthusiast</span> who thrives on turning complex 
-                problems into elegant solutions.
+                Hi, I'm a <span className="text-blue-400 font-semibold">Full-stack Developer</span> who loves building things with code.
               </p>
               <div className="space-y-4 pl-4 border-l-2 border-blue-800">
                 <p className="text-gray-300">
-                  <span className="text-blue-300 font-semibold">💡 Innovation Driver:</span> From crafting scalable web applications 
-                  to designing custom hardware solutions, I'm always pushing the boundaries of what's possible.
+                  <span className="text-blue-300 font-semibold">💡 Creative Builder:</span> I enjoy making websites and apps that work well and look good.
                 </p>
                 <p className="text-gray-300">
-                  <span className="text-cyan-300 font-semibold">🔧 Problem Solver:</span> I specialize in full-stack development 
-                  with Java/Spring Boot, MERN stack, and creating intuitive user experiences that make an impact.
+                  <span className="text-cyan-300 font-semibold">🔧 Problem Solver:</span> I work with Java, Spring Boot, and the MERN stack to solve real problems.
                 </p>
                 <p className="text-gray-300">
-                  <span className="text-blue-300 font-semibold">🤖 Tech Explorer:</span> My passion extends to IoT, home automation, 
-                  and AI solutions, where I leverage cutting-edge technologies to build smart, connected systems.
+                  <span className="text-blue-300 font-semibold">🌐 Tech Enthusiast:</span> I also like exploring IoT, automation, and new technologies.
                 </p>
               </div>
             </div>
